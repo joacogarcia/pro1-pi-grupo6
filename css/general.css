@@ -67,7 +67,7 @@ input{
     align-items: center;
     width: 200px;
     padding: 10px;
-    background-color: white;
+    background-color: rgb(223, 53, 53);
     border-radius: 5px;
     height: 350px;
 }
