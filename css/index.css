@@ -24,8 +24,7 @@ header{
 input{
     border-radius: 50px;
     border: solid;
-    border-color: white;
-    
+    border-color: white;  
 }
 
 
@@ -38,23 +37,8 @@ h1{
     align-items: center;
     justify-content:center;
     display:flex;
-    color: white;
+    color: white;}
     
-  
-}
-
-section{
-    margin-left: 5%;
-    margin-right: 5%;
-    align-items: center;
-    justify-content: center;
-    display:flex;
-    flex-wrap: wrap;
-}
-.img{
-    width: 160px; 
-    height: 260px;
-}
 
 article{
     
