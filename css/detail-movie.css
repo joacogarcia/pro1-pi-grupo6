@@ -1,47 +1,4 @@
-body{
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin:0%;
-    background-color: white;
-    
-    
-}
 
-header{
-    display:flex;
-    align-items: center;
-    background-color: rgba(100, 100, 100, 0.521);   
-    min-height: 50px;
-    justify-content: space-around; 
-    border-bottom: solid;  
-    border-top: solid;
-    border-color: rgba(100, 100, 100, 0.521); 
-}   
-
-.boton{
-    background-color: white;
-    border: white;
-}
-input{
-    border-radius: 50px;
-    border: solid;
-    border-color: white;
-    
-}
-
-
-h1{
-    background-color: rgba(100, 100, 100, 0.521);
-    border-style:solid;
-    border-left: none;
-    border-right: none;
-    border-color:  rgba(100, 100, 100, 0.521);
-    align-items: center;
-    justify-content:center;
-    display:flex;
-    color: white;
-    
-  
-}
 
 section{
     

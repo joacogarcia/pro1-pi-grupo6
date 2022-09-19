@@ -1,133 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DETAIL MOVIE</title>
-    <link href="./css/detail-movie.css" rel="stylesheet" type="text/css">
+    <link href="./css/general.css" rel="stylesheet" type="text/css">
 
 </head>
+
 <body>
-    <header class="HeadDetail">
+    <header class="header">
         <a href="index.html">
             <img class="logo" src="./img/logo.png" alt="Logo">
         </a>
-    
-    <form action="./search-results.html">
-        <div>
-            <input type="text" placeholder="Busqueda"> <button class="boton" type="submit">Ir</button>
-        </div>
-    </form>
-    <p>
-        <a href="index.html"> HOME </a> 
-        <a href="detail-genres.html"> GENEROS </a> 
-        <a href="./favorite.html"> FAVORITOS </a> 
-        <a href="index.html"> PELICULAS </a>
-        
-    </p>
+
+        <form action="./search-results.html">
+            <div>
+                <input type="text" placeholder="Busqueda"> <button class="boton" type="submit">Ir</button>
+            </div>
+        </form>
+        <p>
+            <a class="headera" href="index.html"> HOME </a>
+            <a class="headera" href="detail-genres.html"> GENEROS </a>
+            <a class="headera" href="./favorite.html"> FAVORITOS </a>
+            <a class="headera" href="index.html"> PELICULAS </a>
+        </p>
     </header>
 
-    <article class="DetailPeli">
-        <div class="Nombre">
-            <h2>DETAIL POPULAR MOVIES</h2>
-        </div>
-        <div class="ContenedorPeli">
-            <img src="./img/joker.jpg" alt="joker" height="400px">
+    <h2> Details movie</h2>
 
-            <ul class="detallepeli">
-                <li class="TitleName">JOKER</li>
-                <li class="Sinopsis">2020</li>
-                <li class="oculto">RATING</li>
-                <li class="oculto"><i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i></li>
-                <li> CATEGORY:ACTION</li>
-                <li>Forever alone in a crowd, failed comedian Arthur Fleck seeks connection as he walks the streets of Gotham City. Arthur wears two masks -- the one he paints for his day job as a clown, and the guise he projects in a futile attempt to feel like he's part of the world around him. Isolated, bullied and disregarded by society, Fleck begins a slow descent into madness as he transforms into the criminal mastermind known as the Joker. </li>
-                <li class="favbot"> guardar <i class="fa-solid fa-download"></i></li>
-        
-            </ul>
-        </div>
-        <div class="ContenedorPeli">
-            <span class="PortadaPeli"> <img src="./img/señoranillosll.jpg" height="400px" alt="Senordelosanillos"></span>
-            
-            <ul class="detallepeli">
-                <li class="TitleName">LORD OF THE RINGS</li>
-                <li class="Sinopsis">2009</li>
-                <li class="oculto">RATING</li>
-                <li class="oculto"><i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i></li>
-                <li> CATEGORY:ACTION</li>
-                <li>The future of civilization rests in the fate of the One Ring, which has been lost for centuries. Powerful forces are unrelenting in their search for it. But fate has placed it in the hands of a young Hobbit named Frodo Baggins (Elijah Wood), who inherits the Ring and steps into legend. A daunting task lies ahead for Frodo when he becomes the Ringbearer - to destroy the One Ring in the fires of Mount Doom where it was forged.
-                </li>
-                <li class="favbot"> guardar <i class="fa-solid fa-download"></i></li>
-        </div>
-        <div class="ContenedorPeli">
-            <span class="PortadaPeli"> <img src="./img/starwarsl.jpg" height="400px" alt="starwars"></span>
+    <section class="contenedorpeli">
+        <img src="./img/joker.jpg" alt="joker" class="joker" >
 
-            <ul class="detallepeli">
-                <li class="TitleName">STAR WARS</li>
-                <li class="Sinopsis">2010</li>
-                <li class="oculto">RATING</li>
-                <li class="oculto"><i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i></li>
-                <li> CATEGORY:FICTION</li>
-                <li> The Imperial Forces -- under orders from cruel Darth Vader (David Prowse) -- hold Princess Leia (Carrie Fisher) hostage, in their efforts to quell the rebellion against the Galactic Empire. Luke Skywalker (Mark Hamill) and Han Solo (Harrison Ford), captain of the Millennium Falcon, work together with the companionable droid duo R2-D2 (Kenny Baker) and C-3PO (Anthony Daniels) to rescue the beautiful princess, help the Rebel Alliance, and restore freedom and justice to the Galaxy.
-                </li>
-                <li class="favbot"> guardar <i class="fa-solid fa-download"></i></li>
-            </div>
-        <div class="ContenedorPeli">
-            <span class="PortadaPeli"> <img src="./img/titanic.jpg" alt="titanic" height="400px"></span>
-            <ul class="detallepeli">
-                <li class="TitleName">TITANIC</li>
-                <li class="Sinopsis">2008</li>
-                <li class="oculto">RATING</li>
-                <li class="oculto"><i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i></li>
-                <li> CATEGORY:ROMANTIC</li>
-                <li>James Cameron's "Titanic" is an epic, action-packed romance set against the ill-fated maiden voyage of the R.M.S. Titanic; the pride and joy of the White Star Line and, at the time, the largest moving object ever built. She was the most luxurious liner of her era -- the "ship of dreams" -- which ultimately carried over 1,500 people to their death in the ice cold waters of the North Atlantic in the early hours of April 15, 1912.
-                </li>
-                <li class="favbot"> guardar <i class="fa-solid fa-download"></i></li>
-        </div>
-        <div class="ContenedorPeli">
-            <span class="PortadaPeli"> <img src="./img/pulpfiction.jpg" alt="pulpfiction" height="400px">
-             </span>
-             <ul class="detallepeli">
-                <li class="TitleName">PULP FICTION</li>
-                <li class="Sinopsis">1996</li>
-                <li class="oculto">RATING</li>
-                <li class="oculto"><i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i></li>
-                <li> CATEGORY:FICTION</li>
-                <li>Vincent Vega (John Travolta) and Jules Winnfield (Samuel L. Jackson) are hitmen with a penchant for philosophical discussions. In this ultra-hip, multi-strand crime movie, their storyline is interwoven with those of their boss, gangster Marsellus Wallace (Ving Rhames) ; his actress wife, Mia (Uma Thurman) ; struggling boxer Butch Coolidge (Bruce Willis) ; master fixer Winston Wolfe (Harvey Keitel) and a nervous pair of armed robbers, "Pumpkin" (Tim Roth) and "Honey Bunny" (Amanda Plummer).
+        <ul class="detallepeli">
+            <li class="TitleName">JOKER</li>
+            <li class="Sinopsis">2020</li>
+            <li class="oculto">RATING</li>
+            <li class="oculto"><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </li>
+            <li> CATEGORY:ACTION</li>
+            <li>Forever alone in a crowd, failed comedian Arthur Fleck seeks connection as he walks the streets of
+                Gotham City. Arthur wears two masks -- the one he paints for his day job as a clown, and the guise he
+                projects in a futile attempt to feel like he's part of the world around him. Isolated, bullied and
+                disregarded by society, Fleck begins a slow descent into madness as he transforms into the criminal
+                mastermind known as the Joker. </li>
+            <li class="favbot"> guardar class="fa-solid fa-download"</li>
 
-                </li>
-                <li class="favbot"> guardar <i class="fa-solid fa-download"></i></li>
-
-
-        </div>
-        <!--SECCION DEL FOOTER-->
-    </article>
-        <!--SECCION DEL FOOTER-->
+        </ul>
+    </section>
     <footer>
-        <div class="footer">
-            Joaquín García, Victoria Portillo y Santos Pasman 
-        </div>
-        
-    </footer>
+        <p> Joaquín García, Victoria Portillo y Santos Pasman </p>
 </body>
+
 </html>
