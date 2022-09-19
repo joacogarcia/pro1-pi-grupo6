@@ -44,6 +44,12 @@ header{
     color: white;
 }
 
+h3{
+  color: black;
+  text-align:center;
+  }
+
+
 .boton{
     background-color: white;
     border: white;
