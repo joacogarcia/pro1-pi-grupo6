@@ -69,6 +69,7 @@ input{
     justify-content: space-evenly;
     display: flex;
     flex-wrap: wrap;
+    height: 400px;
 }
 
 .ppa{display:flex ;
@@ -91,6 +92,7 @@ input{
     justify-content: space-evenly;
     display: flex;
     flex-wrap: wrap;
+    height: 400px;
 }
 
 .mvpa{display:flex ;
@@ -114,7 +116,9 @@ input{
     justify-content: space-evenly;
     display: flex;
     flex-wrap: wrap;
-}
+    height: 400px;
+    }
+
 
 .spa{display:flex ;
     flex-direction: column;
@@ -136,6 +140,7 @@ input{
     justify-content: space-evenly;
     display: flex;
     flex-wrap: wrap;
+    height: 400px;
 }
 
 .mvsa{
@@ -389,4 +394,43 @@ h2{
 .terminos{
     text-decoration: none;
     color: antiquewhite;
+}
+
+@media (max-width : 768px){
+    header{
+        flex-direction: column;
+    } 
+}
+@media (max-width : 420px){
+    header{
+        flex-direction: column;
+    }
+    .pp{
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+    } 
+    .ppa{
+        margin: 25px;
+    }
+    .mvp{
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+    }
+    .mvpa{
+        margin: 25px;
+    }
+        
+    .mvs{
+     align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+    }
+    .mvsa{
+        margin: 25px;
+    }
 }
