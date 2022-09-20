@@ -103,7 +103,7 @@ input{
     align-items: center;
     width: 200px;
     padding: 10px;
-    background-color: rgb(214, 99, 99);
+    background-color:transparent;
     border-radius: 5px;
     height: 350px;
 }
@@ -128,7 +128,7 @@ input{
     align-items: center;
     width: 200px;
     padding: 10px;
-    background-color: rgb(209, 91, 91);
+    background-color: transparent;
     border-radius: 5px;
     height: 350px;
 }
@@ -152,7 +152,7 @@ input{
     align-items: center;
     width: 200px;
     padding: 10px;
-    background-color: rgb(187, 69, 69);
+    background-color: transparent;
     border-radius: 5px;
     height: 350px;
 }
@@ -212,7 +212,7 @@ h2{
     align-items: center;
     width: 200px;
     padding: 10px;
-    background-color: rgb(223, 53, 53);
+    background-color: transparent;
     border-radius: 5px;
     height: 350px;
 }
@@ -238,7 +238,7 @@ h2{
     align-items: center;
     width: 200px;
     padding: 10px;
-    background-color: rgb(223, 53, 53);
+    background-color: transparent;
     border-radius: 5px;
     height: 350px;
 }
@@ -453,11 +453,6 @@ div.redes li .apple{
     align-items: center;
 }
 
-@media (max-width : 768px){
-    header{
-        flex-direction: column;
-    } 
-}
 @media (max-width: 420px){
     header{
         flex-direction: column;
