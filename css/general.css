@@ -30,7 +30,7 @@ header{
 }
 
 .a{
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     padding-right: 10px;
     text-align: center;
@@ -47,8 +47,10 @@ header{
 }
 
 h3{
-  color: black;
+  color: rgb(255, 254, 254);
   text-align:center;
+  text-decoration: none;
+
   }
 
 
@@ -247,4 +249,144 @@ h2{
 .imgsf{
     width: 160px; 
     height: 260px;
+}
+
+.lista{
+    display:flex ;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    text-decoration: none;
+
+}
+
+#lista1{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 300px;
+    height: 450px;
+    list-style: none;
+    margin: 40px;
+    padding: 25px;
+    background-color:  rgba(255, 255, 255, 0.849);
+    border-radius: 5px;
+    display:inline-flex;
+    color: blueviolet;
+    text-decoration: none;
+}
+
+
+
+#lista2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 300px;
+    height: 450px;
+    list-style: none;
+    margin: 40px;
+    padding: 25px;
+    background-color:  rgba(255, 255, 255, 0.849);
+    border-radius: 5px;
+    display:inline-flex;
+    color: blueviolet;
+    text-decoration: none;}
+
+.gt{
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.gta{display:flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    padding: 10px;
+    background-color: rgb(223, 53, 53);
+    border-radius: 5px;
+    height: 350px;
+}
+
+.imgt{
+    width: 160px; 
+    height: 260px; 
+}
+
+.tgenre{
+    background-color: rgba(100, 100, 100, 0.521);
+    border-style:solid;
+    border-left: none;
+    border-right: none;
+    border-color:  rgba(100, 100, 100, 0.521);
+    align-items: center;
+    justify-content:center;
+    display:flex;
+    color: white;
+}
+
+.frase{
+    font-size: xx-large;
+    text-align: center;
+    font-weight: bold;
+    color: beige;
+}
+
+.tdetail{background-color: rgba(100, 100, 100, 0.521);
+    border-style:solid;
+    border-left: none;
+    border-right: none;
+    border-color:  rgba(100, 100, 100, 0.521);
+    align-items: center;
+    justify-content:center;
+    display:flex;
+    color: white;
+}
+
+.listad{
+    list-style: none;
+    line-height: 1cm;
+}
+
+.subt{
+    background-color: rgba(100, 100, 100, 0.521);
+    border-style:solid;
+    border-left: none;
+    border-right: none;
+    border-color:  rgba(100, 100, 100, 0.521);
+    align-items: center;
+    justify-content:center;
+    display:flex;
+    color: white;
+}
+
+.friends{
+    height: 400px;
+}
+
+.dg{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.tsearch{
+    background-color: rgba(100, 100, 100, 0.521);
+    border-style:solid;
+    border-left: none;
+    border-right: none;
+    border-color:  rgba(100, 100, 100, 0.521);
+    align-items: center;
+    justify-content:center;
+    display:flex;
+    color: white;
+}
+
+.terminos{
+    text-decoration: none;
+    color: antiquewhite;
 }
