@@ -401,16 +401,16 @@ h2{
         flex-direction: column;
     } 
 }
-@media (max-width : 420px){
+@media (max-width: 420px){
     header{
         flex-direction: column;
     }
     .pp{
-    align-items: center;
-    justify-content: space-evenly;
-    display: flex;
-    flex-wrap: wrap;
-    } 
+        align-items: center;
+        justify-content: space-evenly;
+        display: flex;
+        flex-wrap: wrap;
+        } 
     .ppa{
         margin: 25px;
     }
@@ -432,5 +432,25 @@ h2{
     }
     .mvsa{
         margin: 25px;
+    }
+    .gta{
+        margin: 25px;
+    }
+
+    .sp{align-items: center;
+        justify-content: space-evenly;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .spa{
+        margin: 25px;
+    }
+    footer{
+    background-color: rgba(237, 209, 250, 0.671);
+    border-bottom: solid;
+    border-top: solid;
+    border-color: rgba(46, 2, 63, 0.521);
+    text-align: center;
     }
 }
