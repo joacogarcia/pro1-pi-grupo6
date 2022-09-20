@@ -57,7 +57,9 @@ h3{
 .boton{
     background-color: white;
     border: white;
+    border-radius: 20px
 }
+
 input{
     border-radius: 50px;
     border: solid;
