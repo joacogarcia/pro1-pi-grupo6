@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./css/search-results.css" rel="stylesheet" type="text/css">
+    <link href="./css/general.css" rel="stylesheet" type="text/css">
     <title>Results</title>
 </head>
 <body>
     <header>
-        <a href="index.html">
-            <img class="logo" src="./img/logo.png" alt="Logo">
+        <a  class="headera"   href="index.html">
+            <img class="logo" src="./img/panda.png" alt="Logo">
         </a>
    
     <form action="./search-results.html">
@@ -19,26 +19,28 @@
         </div>
     </form>
     <p>
-        <a href="index.html"> HOME </a> 
-        <a href="genres.html"> GENEROS </a> 
-        <a href="favorite.html"> FAVORITOS </a> 
+        <a  class="headera"  href="index.html"> HOME </a> 
+        <a class="headera"   href="genres.html"> GENEROS </a> 
+        <a class="headera"    href="favorite.html"> FAVORITOS </a> 
     </p>
 </header>
-<h1>Resultados:</h1>
-<section>
-<div class="div">
-<article class="junto">
-    <a href="detail-movie.html"><h3>Joker (2019)</h3></a>
-    <img class="img" src="./img/joker.jpg" alt="Joker">
-</article>
-<article>
-        <p>Año: 2019</p>
-        <p>Duración: 121 min</p>
-        <p>Director: Todd Phillips</p>
-        <p>Genero: <a href="detail-genres.html">Thriller</a></p>
-        <p>Sinopsis:Arthur Fleck (Phoenix) vive en Gotham con su madre, y su única motivación en la vida es hacer reír a la gente. Actúa haciendo de payaso en pequeños trabajos, pero tiene problemas mentales que hacen que la gente le vea como un bicho raro. Su gran sueño es actuar como cómico delante del público, pero una serie de trágicos acontecimientos le hará ir incrementando su ira contra una sociedad que le ignora.</p>
- </div>
-</article>
-</section>
+<h1 class="tsearch" >Resultado de búsqueda: Joker </h1>
+    <section class="contenedorpeli">
+        <img src="./img/joker.jpg" alt="joker" class="joker">
+
+        <ul class="listad"  >
+            <h2 class="subt" >JOKER</h2>
+            <li class="li1"  > CALIFICACIÓN:⭐⭐⭐⭐ </li>
+            <li class="li1"  > Fecha de estreno: 04/10/20219</li>
+            <li  class="li1"  > Duración: 2h 2m </li>
+            <li  class="li1"  >Género: <a href="detail-genres.html">Thriller</a></li>
+            <li  class="li1"  >Sinopsis:  Arthur Fleck adora hacer reír a la gente, pero su carrera como comediante es un fracaso. El
+                repudio social, la marginación y una serie de trágicos acontecimientos lo conducen por el sendero de la
+                locura y, finalmente, cae en el mundo del crimen. </li>
+        </ul>
+    </section>
+    <section class="contenedorpeli" >
+    <h2>Términos relacionados: <a class="terminos" href="detail-genres.html">Thriller</a> </h2>
+    </section>
 </body>
 </html>
