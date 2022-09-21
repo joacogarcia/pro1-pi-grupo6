@@ -23,6 +23,21 @@ header {
     margin: left 10px;
 }
 
+.navh ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+}
+.navh ul li {
+    list-style-type: none;
+    display: inline;
+    color: white;
+}
+.navh ul .separadores{
+    margin-right: 10px;
+}
+
 .headera {
     text-decoration: none;
     color: rgb(255, 255, 255);
@@ -375,10 +390,14 @@ footer {
         transform: translateY(-3px) scale(1.05);
         box-shadow: 0 5px 5px 0px rgba(0, 0, 0, .2);
     }
-    .boton {
+    .boton:hover {
         background-color: #700f6c;
         border: white;
         border-radius: 20px;
         color: white;
+    }
+    .headera:hover{
+        transform: translateY(-3px) scale(1.05);
+        background-color: rgba(100, 100, 100, 0.521);
     }
 }
