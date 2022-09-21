@@ -262,13 +262,13 @@ footer{
     --instagram: #cd486b;
     --apple: #5D5E58;
 }
-div.redes li{
+.redes li{
     list-style-type: none;
     display: inline-block;
     margin: 0 5px 0;
     left: 100px;
 }
-div.redes li a{
+.redes li a{
     display: block;
     padding: 0 10px;
     color: white;
@@ -278,25 +278,22 @@ div.redes li a{
     margin-left: 20px;
     
 }
-div.redes{
+.redes{
     text-align: right;
     margin-right: 10px;
     margin-top: 5px;
 }
-div.redes li a:hover{
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 5px 5px 0px rgba(0, 0, 0, .2);
-}
-div.redes li .facebook{
+
+.facebook{
     background: var(--facebook);
 }
-div.redes li .twitter{
+.twitter{
     background: var(--twitter);
 }
-div.redes li .instagram{
+.instagram{
     background: var(--instagram);
 }
-div.redes li .apple{
+.apple{
     background: var(--apple);
 }
 
@@ -339,5 +336,12 @@ div.redes li .apple{
         color: white;
         text-decoration: none;
         flex-direction: column;
+    }
+}
+
+@media (hover: hover){
+    .redes li a:hover{
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 5px 5px 0px rgba(0, 0, 0, .2);
     }
 }
