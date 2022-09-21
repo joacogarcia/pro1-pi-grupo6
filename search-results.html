@@ -12,21 +12,27 @@
 </head>
 <body>
     <header>
-        <a  class="headera"   href="index.html">
-            <img class="logo" src="./img/panda.png" alt="Logo">
+        <a    href="index.html">
+                <img class="logo" src="./img/panda.png" alt="Logo">
         </a>
-   
-        <form action="./search-results.html">
-            <div>
-                <input type="text" placeholder="Busqueda"> <button class="boton" type="submit">Buscar</button>
-            </div>
+    
+        <form method="get" action="./search-results.html" target="_blank">
+            <input type="search" placeholder="Buscar" name="buscador"> <button class="boton" type="submit">Buscar</button>
         </form>
-    <p>
-        <a  class="headera"  href="index.html">| HOME |</a> 
-        <a class="headera"   href="genres.html"> GENEROS |</a> 
-        <a class="headera"    href="favorite.html"> FAVORITOS |</a> 
-    </p>
-</header>
+    
+        <nav class="navh">
+            <ul>
+                <li>|</li>
+                <li><a  class="headera"     href="index.html">HOME</a></li> 
+                <li>|</li>
+                <li><a  class="headera"     href="genres.html">GÉNEROS</a></li>
+                <li>|</li>
+                <li><a  class="headera"     href="favorite.html">FAVORITOS</a></li>
+                <li>|</li>
+            </ul>
+        </nav>
+        
+    </header>
 <h1 class="tsearch" >Resultado de búsqueda: Joker </h1>
     <section class="contenedorpeli">
         <img src="./img/joker.jpg" alt="joker" class="joker">
