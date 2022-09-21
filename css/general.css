@@ -89,9 +89,9 @@ input {
 
 }
 
-.ims {
-    width: 160px;
-    height: 260px;
+.ims{
+    width: 200px; 
+    height: 300px;
 }
 
 h2 {
@@ -349,14 +349,15 @@ footer {
         text-decoration: none;
         flex-direction: column;
     }
+}
 
-    .tsearch {
-        text-align: center;
+@media (hover: hover){
+    .redes li a:hover{
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 5px 5px 0px rgba(0, 0, 0, .2);
     }
-
-    @media (hover: hover) {
-        .redes li a:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 5px 5px 0px rgba(0, 0, 0, .2);
-        }
+    .sa img:hover{
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 5px 5px 0px rgba(0, 0, 0, .2);
     }
+}
