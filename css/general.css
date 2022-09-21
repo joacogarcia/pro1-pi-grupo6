@@ -152,7 +152,17 @@ h2 {
     list-style: none;
 }
 
+#lista1 li a{
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
 
+#lista2 li a{
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
 
 #lista2 {
     display: flex;
@@ -349,6 +359,10 @@ footer {
         color: white;
         text-decoration: none;
         flex-direction: column;
+    }
+    .tsearch{
+        text-align: center;
+        margin: 10px;
     }
 }
 
