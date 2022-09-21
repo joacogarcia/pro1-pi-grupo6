@@ -319,15 +319,9 @@ div.redes li .apple{
         } 
     .sa{
         margin: 25px;
+        flex-direction: column
     }
     
-    footer{
-    background-color: rgba(237, 209, 250, 0.671);
-    border-bottom: solid;
-    border-top: solid;
-    border-color: rgba(46, 2, 63, 0.521);
-    text-align: center;
-    }
     .contenedorpeli {
         margin: 40px;
         flex-direction: column;
