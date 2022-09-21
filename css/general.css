@@ -70,8 +70,7 @@ input{
     align-items: center;
     justify-content: space-evenly;
     display: flex;
-    flex-wrap: wrap;
-    height: 400px;
+    flex-wrap: wrap;;
 }
 
 .sa{display:flex ;
@@ -88,8 +87,8 @@ input{
 }
 
 .ims{
-    width: 160px; 
-    height: 260px;
+    width: 200px; 
+    height: 300px;
 }
 
 h2{
@@ -341,6 +340,10 @@ footer{
 
 @media (hover: hover){
     .redes li a:hover{
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 5px 5px 0px rgba(0, 0, 0, .2);
+    }
+    .sa img:hover{
         transform: translateY(-3px) scale(1.05);
         box-shadow: 0 5px 5px 0px rgba(0, 0, 0, .2);
     }
