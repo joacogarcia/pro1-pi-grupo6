@@ -57,7 +57,9 @@ h3{
 .boton{
     background-color: white;
     border: white;
+    border-radius: 20px
 }
+
 input{
     border-radius: 50px;
     border: solid;
@@ -325,5 +327,23 @@ div.redes li .apple{
     border-top: solid;
     border-color: rgba(46, 2, 63, 0.521);
     text-align: center;
+    }
+    .contenedorpeli {
+        margin: 40px;
+        flex-direction: column;
+        padding: 25px;
+        background-color: rgba(100, 100, 100, 0.521);
+        border-radius: 5px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    .lista {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        color: white;
+        text-decoration: none;
+        flex-direction: column;
     }
 }
