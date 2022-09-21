@@ -14,21 +14,27 @@
 </head>
 
 <body>
-    <header class="header">
-        <a href="index.html">
-            <img class="logo" src="./img/panda.png" alt="Logo">
+    <header>
+        <a    href="index.html">
+                <img class="logo" src="./img/panda.png" alt="Logo">
         </a>
-
-        <form action="./search-results.html">
-            <div>
-                <input type="text" placeholder="Busqueda"> <button class="boton" type="submit">Buscar</button>
-            </div>
+    
+        <form method="get" action="./search-results.html" target="_blank">
+            <input type="search" placeholder="Buscar" name="buscador"> <button class="boton" type="submit">Buscar</button>
         </form>
-        <p>
-            <a class="headera" href="index.html">| HOME |</a>
-            <a class="headera" href="detail-genres.html"> GENEROS |</a>
-            <a class="headera" href="./favorite.html"> FAVORITOS |</a>
-        </p>
+    
+        <nav class="navh">
+            <ul>
+                <li>|</li>
+                <li><a  class="headera"     href="index.html">HOME</a></li> 
+                <li>|</li>
+                <li><a  class="headera"     href="genres.html">GÉNEROS</a></li>
+                <li>|</li>
+                <li><a  class="headera"     href="favorite.html">FAVORITOS</a></li>
+                <li>|</li>
+            </ul>
+        </nav>
+        
     </header>
 
     <h1 class="tdetail" >Detalle películas</h1>
