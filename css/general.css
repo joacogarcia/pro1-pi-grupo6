@@ -371,8 +371,14 @@ footer {
         transform: translateY(-3px) scale(1.05);
         box-shadow: 0 5px 5px 0px rgba(0, 0, 0, .2);
     }
-    .sa img:hover{
+    .sa:hover{
         transform: translateY(-3px) scale(1.05);
         box-shadow: 0 5px 5px 0px rgba(0, 0, 0, .2);
+    }
+    .boton {
+        background-color: #700f6c;
+        border: white;
+        border-radius: 20px;
+        color: white;
     }
 }
