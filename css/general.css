@@ -71,7 +71,6 @@ input{
     justify-content: space-evenly;
     display: flex;
     flex-wrap: wrap;
-    height: 400px;
 }
 
 .sa{display:flex ;
@@ -339,5 +338,9 @@ div.redes li .apple{
         color: white;
         text-decoration: none;
         flex-direction: column;
+    }
+
+    .tsearch{
+        text-align: center;
     }
 }
