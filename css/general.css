@@ -71,19 +71,20 @@ input{
     justify-content: space-evenly;
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
 .sa{display:flex ;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: 230px;
     padding: 10px;
     background-color: transparent;
     border-radius: 5px;
-    height: 350px;
+    height: 400px;
     background-color: rgba(100, 100, 100, 0.521);
-
+    margin: 10px
 }
 
 .ims{
