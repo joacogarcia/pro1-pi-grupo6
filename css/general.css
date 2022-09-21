@@ -379,6 +379,11 @@ footer {
         text-align: center;
         margin: 10px;
     }
+
+    .ttindex{
+        text-align: center;
+        margin: 15px;
+    }
 }
 
 @media (hover: hover){
