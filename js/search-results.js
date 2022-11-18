@@ -1,5 +1,6 @@
-let form = document.querySelector('#formulario');
-let input = document.querySelector('.input');
+
+let form = document.querySelector('.formulario');
+let input = document.querySelector('#input');
 
 
 form.addEventListener('submit', function(e) {
@@ -14,3 +15,6 @@ form.addEventListener('submit', function(e) {
         form.submit();
     }
 })
+
+let urlSearch = https://api.themoviedb.org/3/search/movie?api_key=<<7d4b7de655aa19e767e9ef8b0e0359b5>>&language=en-US&page=1&include_adult=false; 
+
