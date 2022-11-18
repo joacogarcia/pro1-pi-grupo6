@@ -1,23 +1,26 @@
-let api_key = '81faef6942a31915ed87b416fbba64ba';
-let urlPop= `https://api.themoviedb.org/3/movie/popular?api_key=${api_key}&language=en-US&page=1`;
-let urlValoradas = `https://api.themoviedb.org/3/movie/top_rated?api_key=${api_key}&language=en-US&page=1`;
-let urlSeriesPop = `https://api.themoviedb.org/3/tv/popular?api_key=${api_key}&language=en-US&page=1`;
-let listaPopulares = document.querySelector('.ppopulares');
-let listaSeries = document.querySelector("#series");
-let listaValoradas = document.querySelector('#valoradas');
+let api_key = '7d4b7de655aa19e767e9ef8b0e0359b5';
+let urlPPop= `https://api.themoviedb.org/3/movie/popular?api_key=${api_key}&language=en-US&page=1`;
+let urlPVal = `https://api.themoviedb.org/3/movie/top_rated?api_key=${api_key}&language=en-US&page=1`;
+let urlSPop = `https://api.themoviedb.org/3/tv/popular?api_key=${api_key}&language=en-US&page=1`;
+let urlSVal = `https://api.themoviedb.org/3/tv/top_rated?api_key=${api_key}&language=en-US&page=1`;
+let listaPopulares = document.querySelector("#ppopulares");
+let listaSeries = document.querySelector("#pmasvisto");
+let listaValoradas = document.querySelector("#spopulares");
+console.log(listaPopulares)
 
-fetch(urlPop)
+fetch(urlPPop)
     .then(function (respuesta) {
         return respuesta.json();
     }).then(function (data) {
-
         console.log(data.results);
+        let peliculas = data.results;
         for (let i = 0; i < 5; i++) {
-
-            let pelicula = data.results[i];
+            console.log(peliculas[i]);
             listaPopulares.innerHTML += `<article  class="sa"  >
-                                            <a href="detail-movie.html?idPelicula=${pelicula.id}" ><h3>Star Wars: Episodio IV (1983)</h3></a>
-                                            <img class="ims" src="./img/starwarslv.jpg" alt="Star Wars: Episodio VI">
+                                            <a href="detail-movie.html?idPelicula=${peliculas[i].id}" >
+                                            <h3>${peliculas[i].title}</h3>
+                                            <h4>${peliculas[i].release_date}</h4>
+                                            <img class="ims" src="https://image.tmdb.org/t/p/w500/${peliculas[i].poster_path}" alt=${peliculas[i].name}> </a>
                                          </article> `
         }
         return data;
@@ -26,25 +29,21 @@ fetch(urlPop)
         return error;
     });
 
-    fetch(urlSeriesPop)
+    fetch(urlSPop)
     .then(function (respuesta) {
         return respuesta.json();
     }).then(function (data) {
+        console.log(data.results);
+        let peliculas = data.results;
         for (let i = 0; i < 5; i++) {
-            let pelicula = data.results[i];
-            console.log(data.results);
-            listaSeries.innerHTML +=  ` <article class="cajas">
-            <a class="enlace" href="./detail-serie.html?idPelicula=${pelicula.id}"> 
-            <img  class= "pelis" src="https://image.tmdb.org/t/p/w500/${serie.poster_path}" > </a>
-                                                    <p class="titulo" > ${pelicula.name} </p>
-                                                    <p class="estreno">${pelicula.first_air_date}</p>
-                                                    
-                                                    
-                                                    
-                                    </article> `
-        
+            console.log(peliculas[i]);
+            listaSeries.innerHTML += `<article  class="sa"  >
+                                            <a href="detail-movie.html?idPelicula=${peliculas[i].id}" >
+                                            <h3>${peliculas[i].title}</h3>
+                                            <h4>${peliculas[i].release_date}</h4>
+                                            <img class="ims" src="https://image.tmdb.org/t/p/w500/${peliculas[i].poster_path}" alt=${peliculas[i].name}> </a>
+                                         </article> `
         }
-   
         return data;
     }).catch(function (error) {
        // console.log(error);
@@ -52,21 +51,20 @@ fetch(urlPop)
     });
 
 
-    fetch(urlValoradas)
+    fetch(urlPVal)
     .then(function (respuesta) {
         return respuesta.json();
     }).then(function (data) {
+        console.log(data.results);
+        let peliculas = data.results;
         for (let i = 0; i < 5; i++) {
-            let pelicula = data.results[i];
-            //console.log(pelicula.poster_path);
-
-            listaValoradas.innerHTML += `<article class="cajas">
-                                                <img  class= "pelis" src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}" >
-                                                    <p class="titulo"> ${pelicula.title} </p>
-                                                    <p class="estreno">${pelicula.release_date}</p>
-                                                <a class="estreno" href="./detail-movie.html?idPelicula=${pelicula.id}">Ver mas</a>
-                                    </article>`
-        
+            console.log(peliculas[i]);
+            listaValoradas.innerHTML += `<article  class="sa"  >
+                                            <a href="detail-movie.html?idPelicula=${peliculas[i].id}" >
+                                            <h3>${peliculas[i].title}</h3>
+                                            <h4>${peliculas[i].release_date}</h4>
+                                            <img class="ims" src="https://image.tmdb.org/t/p/w500/${peliculas[i].poster_path}" alt=${peliculas[i].name}> </a>
+                                         </article> `
         }
         return data;
     }).catch(function (error) {
