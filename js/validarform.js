@@ -1,21 +1,18 @@
-let form = document.querySelector('#form')
-let input = document.querySelector('#buscador')
+let form = document.querySelector("form");
+let buscador = document.querySelector("#buscador");
 
-form.addEventListener('submit', function(e) {
+form.addEventListener('submit',(e)=>{
+        e.preventDefault();
+        
+        if (buscador.value == "") {
 
-e.preventDefault();
+            alert('No puede enviar un form vacío')
+            
+        } else if (buscador.value.length < 3 ) {
 
-if (input.value == "") {
+            alert('Debes escribir más de tres caracteres')
+        } else {
 
-    alert('No puede enviar un form vacío')
-    
-} else if (input.value.lenght <3 ) {
-    
-    alert('Debes escribir más de tres caracteres')
-} else {
-
-    this.submit()
-}
-
-
-} )
+        form.submit() 
+        }
+})
