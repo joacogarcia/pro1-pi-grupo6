@@ -17,10 +17,10 @@ fetch(urlPPop)
         for (let i = 0; i < 5; i++) {
             console.log(peliculas[i]);
             listaPopulares.innerHTML += `<article  class="sa"  >
-                                            <a href="detail-movie.html?idPelicula=${peliculas[i].id}" >
                                             <h3>${peliculas[i].title}</h3>
-                                            <h4>${peliculas[i].release_date}</h4>
+                                            <a href="detail-movie.html?idPelicula=${peliculas[i].id}" >
                                             <img class="ims" src="https://image.tmdb.org/t/p/w500/${peliculas[i].poster_path}" alt=${peliculas[i].name}> </a>
+                                            <p>(${peliculas[i].release_date})</p>
                                          </article> `
         }
         return data;
@@ -38,11 +38,11 @@ fetch(urlPPop)
         for (let i = 0; i < 5; i++) {
             console.log(peliculas[i]);
             listaSeries.innerHTML += `<article  class="sa"  >
-                                            <a href="detail-movie.html?idPelicula=${peliculas[i].id}" >
-                                            <h3>${peliculas[i].title}</h3>
-                                            <h4>${peliculas[i].release_date}</h4>
-                                            <img class="ims" src="https://image.tmdb.org/t/p/w500/${peliculas[i].poster_path}" alt=${peliculas[i].name}> </a>
-                                         </article> `
+                                        <h3>${peliculas[i].title}</h3>
+                                        <a href="detail-movie.html?idPelicula=${peliculas[i].id}" >
+                                        <img class="ims" src="https://image.tmdb.org/t/p/w500/${peliculas[i].poster_path}" alt=${peliculas[i].name}> </a>
+                                        <p>(${peliculas[i].release_date})</p>
+                                    </article> `
         }
         return data;
     }).catch(function (error) {
@@ -60,11 +60,11 @@ fetch(urlPPop)
         for (let i = 0; i < 5; i++) {
             console.log(peliculas[i]);
             listaValoradas.innerHTML += `<article  class="sa"  >
-                                            <a href="detail-movie.html?idPelicula=${peliculas[i].id}" >
                                             <h3>${peliculas[i].title}</h3>
-                                            <h4>${peliculas[i].release_date}</h4>
+                                            <a href="detail-movie.html?idPelicula=${peliculas[i].id}" >
                                             <img class="ims" src="https://image.tmdb.org/t/p/w500/${peliculas[i].poster_path}" alt=${peliculas[i].name}> </a>
-                                         </article> `
+                                            <p>(${peliculas[i].release_date})</p>
+                                        </article> `
         }
         return data;
     }).catch(function (error) {

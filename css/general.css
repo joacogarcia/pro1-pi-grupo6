@@ -67,6 +67,13 @@ h3 {
 
 }
 
+p {
+    color: rgb(255, 254, 254);
+    text-align: center;
+    text-decoration: none;
+
+}
+
 
 .boton {
     background-color: white;
@@ -351,6 +358,7 @@ footer {
     .sa {
         margin: 25px;
         flex-direction: column
+        
     }
 
     .contenedorpeli {
