@@ -6,6 +6,7 @@ let urlSVal = `https://api.themoviedb.org/3/tv/top_rated?api_key=${api_key}&lang
 let listaPopulares = document.querySelector("#ppopulares");
 let listaSeries = document.querySelector("#pmasvisto");
 let listaValoradas = document.querySelector("#spopulares");
+let listaValoradas = document.querySelector("#spopulares");
 console.log(listaPopulares)
 
 fetch(urlPPop)
