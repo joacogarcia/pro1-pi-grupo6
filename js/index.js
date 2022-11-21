@@ -3,11 +3,11 @@ let urlPPop= `https://api.themoviedb.org/3/movie/popular?api_key=${api_key}&lang
 let urlPVal = `https://api.themoviedb.org/3/movie/top_rated?api_key=${api_key}&language=en-US&page=1`;
 let urlSPop = `https://api.themoviedb.org/3/tv/popular?api_key=${api_key}&language=en-US&page=1`;
 let urlSVal = `https://api.themoviedb.org/3/tv/top_rated?api_key=${api_key}&language=en-US&page=1`;
-let listaPopulares = document.querySelector("#ppopulares");
-let listaSeries = document.querySelector("#pmasvisto");
-let listaValoradas = document.querySelector("#spopulares");
-let listaValoradas = document.querySelector("#spopulares");
-console.log(listaPopulares)
+let listaPpopulares = document.querySelector("#ppopulares");
+let listaPmasvisto = document.querySelector("#pmasvisto");
+let listaSpopulares = document.querySelector("#spopulares");
+let listaSmasvisto = document.querySelector("#smasvisto");
+console.log(listaPpopulares)
 
 fetch(urlPPop)
     .then(function (respuesta) {
@@ -17,7 +17,7 @@ fetch(urlPPop)
         let peliculas = data.results;
         for (let i = 0; i < 5; i++) {
             console.log(peliculas[i]);
-            listaPopulares.innerHTML += `<article  class="sa"  >
+            listaPpopulares.innerHTML += `<article  class="sa"  >
                                             <h3>${peliculas[i].title}</h3>
                                             <a href="detail-movie.html?idPelicula=${peliculas[i].id}" >
                                             <img class="ims" src="https://image.tmdb.org/t/p/w500/${peliculas[i].poster_path}" alt=${peliculas[i].name}> </a>
@@ -38,7 +38,7 @@ fetch(urlPPop)
         let peliculas = data.results;
         for (let i = 0; i < 5; i++) {
             console.log(peliculas[i]);
-            listaSeries.innerHTML += `<article  class="sa"  >
+            listaSpopulares.innerHTML += `<article  class="sa"  >
                                         <h3>${peliculas[i].title}</h3>
                                         <a href="detail-movie.html?idPelicula=${peliculas[i].id}" >
                                         <img class="ims" src="https://image.tmdb.org/t/p/w500/${peliculas[i].poster_path}" alt=${peliculas[i].name}> </a>
@@ -60,7 +60,7 @@ fetch(urlPPop)
         let peliculas = data.results;
         for (let i = 0; i < 5; i++) {
             console.log(peliculas[i]);
-            listaValoradas.innerHTML += `<article  class="sa"  >
+            listaPmasvisto.innerHTML += `<article  class="sa"  >
                                             <h3>${peliculas[i].title}</h3>
                                             <a href="detail-movie.html?idPelicula=${peliculas[i].id}" >
                                             <img class="ims" src="https://image.tmdb.org/t/p/w500/${peliculas[i].poster_path}" alt=${peliculas[i].name}> </a>
