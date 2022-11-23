@@ -133,7 +133,7 @@ h2 {
 
 }
 
-.joker {
+.imgdetail {
     height: 400px;
 }
 
@@ -233,6 +233,17 @@ h2 {
     line-height: 1cm;
     color: white;
     font-weight: bold;
+    text-decoration: none;
+}
+
+.listagd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    display: inline;
+    color: white;
     text-decoration: none;
 }
 
