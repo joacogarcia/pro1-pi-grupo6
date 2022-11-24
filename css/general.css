@@ -95,6 +95,16 @@ input {
     margin-bottom: 20px;
 }
 
+.ss{
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+
+
+}
+
 .sa {
     display: flex;
     flex-direction: column;
@@ -147,6 +157,12 @@ h2 {
     justify-content: center;
     display: flex;
     color: white;
+}
+
+.trailer{
+    display: flex;
+    justify-content: space-around;
+    height: 300px;
 }
 
 
