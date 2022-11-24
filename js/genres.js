@@ -1,6 +1,6 @@
 let urlGenresMovie = "https://api.themoviedb.org/3/genre/movie/list?api_key=7d4b7de655aa19e767e9ef8b0e0359b5&language=en-US" ;
 
-let urlGenresEries = "https://api.themoviedb.org/3/genre/tv/list?api_key=7d4b7de655aa19e767e9ef8b0e0359b5&language=en-US"
+let urlGenresEries = "https://api.themoviedb.org/3/genre/tv/list?api_key=7d4b7de655aa19e767e9ef8b0e0359b5&language=en-US";
 
 let listaPeliculas = document.querySelector("#lista1");
 
@@ -18,9 +18,13 @@ fetch(urlGenresMovie)
     console.log(genres)
 
     let resultado = "";
-    for (let i = 0; i < genres.length; i++) {
+    for (let i = 0; i < 16; i++) {
         
-        resultado += `<li>${genres[i].name}</li>`  ;
+        resultado += `<a href="./detail-genres.html?idPelicula=${genres[i].id}"
+                        <article class= "generosBox">
+                            ${genres[i].name}
+                        </article>
+                    </a>`;
     }
 
     listaPeliculas.innerHTML = resultado ; 
@@ -46,7 +50,11 @@ fetch(urlGenresEries)
     let resultadoSerie = "";
     for (let i = 0; i < genres.length; i++) {
         
-        resultadoSerie += `<li>${genres[i].name}</li>`  ;
+        resultadoSerie += `<a href="./detail-genres.html?idPelicula=${genres[i].id}"
+                                <article class= "generosBox">
+                                    ${genres[i].name}
+                                </article>
+                            </a>`  ;
     }
 
     listaSeries.innerHTML = resultadoSerie ; 

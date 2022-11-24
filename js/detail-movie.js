@@ -11,7 +11,6 @@ let urlPlataformas = `https://api.themoviedb.org/3/movie/${palabra}/watch/provid
 let imagen     = document.querySelector('.imgdetail');
 let contenedor = document.querySelector('.contenedortitulodetails');
 
-/* COMPLETO EL HTML */
 fetch(urlDetalle)
 .then(function(response) {
     return response.json();
@@ -21,7 +20,7 @@ fetch(urlDetalle)
     let generos = data.genres;
     let generospeli = "";
     for (let i = 0; i < generos.length ; i++) {
-        generospeli += `|<a class="listagd" href="./detail-genres.html">${generos[i].name} </a>` 
+        generospeli += `| <a class="listagd" href="./detail-genres.html">${generos[i].name} </a>` 
     }
     generospeli += "|";
     let textodetail = `<h1 class="tdetail">${data.title}</h1> 
@@ -38,6 +37,37 @@ fetch(urlDetalle)
 }).catch(function (error) {
     return error;
 });
+
+
+let lista_peliculas_favoritas = []; 
+let storage = localStorage.getItem('lista_peliculas_favoritas')
+let favoritos = document.querySelector(".botonfavorites")
+console.log(favoritos)
+
+if(storage != null){
+    lista_peliculas_favoritas = JSON.parse(storage);
+};
+
+if (lista_peliculas_favoritas.includes(id)) {
+    favoritos.innerText="Remove from favorites";
+}
+
+favoritos.addEventListener("click", function(e) {
+    e.preventDefault()
+
+    if(lista_peliculas_favoritas.includes(id)){
+        let indice = lista_peliculas_favoritas.indexOf(id);
+        lista_peliculas_favoritas.splice(indice,1);
+        favoritos.innerText="💜 Add to favorites";
+    }else{
+        lista_peliculas_favoritas.push(id);
+        favoritos.innerText="❌ Remove from favorites";
+    }
+
+    let favToString = JSON.stringify(lista_peliculas_favoritas);
+    localStorage.setItem('lista_peliculas_favoritas',favToString)
+
+})
 
 /* PLATAFORMAS */
 fetch(urlPlataformas)
