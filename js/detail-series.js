@@ -83,7 +83,7 @@ fetch(urlTrailer)
         trailer.innerHTML = trailerpeli
     
     }else {
-        trailer.innerText = "NO HAY TRAILER DISPONIBLE"
+        trailer.innerText = "La serie no cuenta con un trailer"
        }
     }).catch(function(error){
     return error;
