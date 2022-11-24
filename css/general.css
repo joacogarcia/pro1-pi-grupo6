@@ -149,6 +149,12 @@ h2 {
     color: white;
 }
 
+.trailer{
+    display: flex;
+    justify-content: space-around;
+    height: 300px;
+}
+
 
 .lista {
     display: flex;

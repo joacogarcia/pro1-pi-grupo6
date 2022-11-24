@@ -38,75 +38,51 @@ fetch(urlDetalle)
     return error;
 });
 
-
-let lista_peliculas_favoritas = []; 
-let storage = localStorage.getItem('lista_peliculas_favoritas')
-let favoritos = document.querySelector(".botonfavorites")
-console.log(favoritos)
-
-if(storage != null){
-    lista_peliculas_favoritas = JSON.parse(storage);
-};
-
-if (lista_peliculas_favoritas.includes(id)) {
-    favoritos.innerText="Remove from favorites";
-}
-
-favoritos.addEventListener("click", function(e) {
-    e.preventDefault()
-
-    if(lista_peliculas_favoritas.includes(id)){
-        let indice = lista_peliculas_favoritas.indexOf(id);
-        lista_peliculas_favoritas.splice(indice,1);
-        favoritos.innerText="💜 Add to favorites";
-    }else{
-        lista_peliculas_favoritas.push(id);
-        favoritos.innerText="❌ Remove from favorites";
+let favoritos = [];
+let recuperoStorage = localStorage.getItem("favoritos");
+if (recuperoStorage != null){
+    favoritos= JSON.parse(recuperoStorage);
     }
 
-    let favToString = JSON.stringify(lista_peliculas_favoritas);
-    localStorage.setItem('lista_peliculas_favoritas',favToString)
 
-})
+let link= document.querySelector(".clave");
 
-/* PLATAFORMAS */
-fetch(urlPlataformas)
-.then(function(response) {
-    return response.json();
-
-}).then(function(data) {
-    let plataformas = document.querySelector('.plataformasdiv');
-    let array = data.results;
-    let texto = "<h2>Providers:</h2>"
-    for(let i=0; i < 12; i++){
-        texto += `<img class="plataformas" src="https://image.tmdb.org/t/p/original/${array[i].logo_path}"></a>`
+link.addEventListener("click", function(e){
+    e.preventDefault();
+    if (favoritos.includes(palabra)){
+        let indice= favoritos.indexOf(palabra);
+        favoritos.splice(indice, 1);
+        link.innerText= "Add to Favorites 🤍";
+        link.style.color = "white";
+    } else {
+        favoritos.push(palabra);
+        link.innerText= "Remove from Favorites";
+        link.style.color = "white";
     }
-    plataformas.innerHTML=texto
     
+    let moviesFavToString = JSON.stringify(favoritos);
+    localStorage.setItem("favoritos", moviesFavToString);
+    })
 
-}).catch(function (error) {
-    return error;
-});
 
-/* TRAILER */
 fetch(urlTrailer)
     .then(function(response){
         return response.json();
 
     }).then(function(infoTrailer){
-        let trailer = document.querySelector('.contenedortrailer');
+        let trailer = document.querySelector('.sectrailer');
         if (infoTrailer.results.length > 0) {
-        let texto = ""
+        let trailerpeli = ""
             for(let i=0; i < 1; i++){ 
                 let trailer = infoTrailer.results[i]
                 if (trailer.key != undefined){
                     let video = infoTrailer.results[i].key
-                    texto += `<article class="trailer">
-                                <iframe src="https://www.youtube.com/embed/${video}" title="YouTube video player" width=491px height=200px frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    trailerpeli += `<article class="trailer">
+                                <iframe src="https://www.youtube.com/embed/${video}" title="YouTube video player" width=491px height=276px frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </article>`
                 }
             }
-        trailer.innerHTML = texto
+        trailer.innerHTML = trailerpeli
     
     }else {
         trailer.innerText = "NO HAY TRAILER DISPONIBLE"
@@ -115,37 +91,3 @@ fetch(urlTrailer)
     return error;
 })
 
-/* RECOMENDACIONES  */
-let recomendaciones = `https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=${api_key}&language=en-US&page=1`
-
-fetch(recomendaciones)
-    .then(function (respuesta) {
-         return respuesta.json()
-    })
-    .then(function (informacion) {
-        console.log(informacion)
-
-        for (var i = 0; i < informacion.results.length; i++) {
-            let id = informacion.results[i].id
-            let title = informacion.results[i].title
-            let annio = informacion.results[i].release_date.slice(0,4);
-            console.log(informacion.results[i].poster_path)
-            
-            if (informacion.results[i].poster_path === "null") {
-                let poster =  `./img/nodisponible.png`
-            }else {
-                let poster = `https://image.tmdb.org/t/p/original/${informacion.results[i].poster_path}`
-            }
-            let listadoRecomendadas = document.querySelector(".listado-series-recomendadas")
-            listadoRecomendadas.innerHTML +=  `<article class="peliculas">
-                                <a href="./Details_peliculas.html?id=${id}"> <img class="imagenes" src="${poster}"></a>
-                                
-                                <a class="nombres" href="./Details_peliculas.html?id=${id}">${title}</a>
-
-                                <a class="nombres" href="./Details_peliculas.html?id=${id}">${annio}</a>
-
-                                <a class="vermas" href="./detallePeliculas.html?id=${id}">Ver mas</a>
-                            </article >`
-    
-    }
-})
