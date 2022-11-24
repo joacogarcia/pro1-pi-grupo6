@@ -5,7 +5,7 @@ let palabra = qsObj.get('idPelicula');
 let api_key = '7d4b7de655aa19e767e9ef8b0e0359b5';
 let urlDetalle = `https://api.themoviedb.org/3/movie/${palabra}?api_key=${api_key}&language=en-US&append_to_response=palabrabuscar`;
 let urlTrailer = `https://api.themoviedb.org/3/movie/${palabra}/videos?api_key=${api_key}&language=en-US`;
-let urlPlataformas = `https://api.themoviedb.org/3/movie/${palabra}/watch/providers?api_key=${api_key}`;
+
 
 
 let imagen     = document.querySelector('.imgdetail');

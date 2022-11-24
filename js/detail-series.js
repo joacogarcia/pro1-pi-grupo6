@@ -3,9 +3,8 @@ let qsObj = new URLSearchParams(qs);
 let palabra = qsObj.get('idPelicula');
 
 let api_key = '7d4b7de655aa19e767e9ef8b0e0359b5';
-let urlDetalle = `https://api.themoviedb.org/3/movie/${palabra}?api_key=${api_key}&language=en-US&append_to_response=palabrabuscar`;
+let urlDetalle = `https://api.themoviedb.org/3/tv/${palabra}?api_key=${api_key}&language=en-US`;
 let urlTrailer = `https://api.themoviedb.org/3/movie/${palabra}/videos?api_key=${api_key}&language=en-US`;
-let urlPlataformas = `https://api.themoviedb.org/3/movie/${palabra}/watch/providers?api_key=${api_key}`;
 
 
 let imagen     = document.querySelector('.imgdetail');
@@ -23,11 +22,10 @@ fetch(urlDetalle)
         generospeli += `| <a class="listagd" href="./detail-genres.html">${generos[i].name} </a>` 
     }
     generospeli += "|";
-    let textodetail = `<h1 class="tdetail">${data.title}</h1> 
+    let textodetail = `<h1 class="tdetail">${data.name}</h1> 
                        <ul class="listad">
                             <li class="datos" id="calificacion">Rating: ${data.vote_average}</li>
-                            <li class="datos" id="estreno">Release date: ${data.release_date}</li>
-                            <li class="datos" id="duracion">Duration: ${data.runtime}</li>
+                            <li class="datos" id="estreno">Release date: ${data.first_air_date}</li>
                             <li class="datos" id="genero">Generos: ${generospeli}</li>
                        </ul>
                     <p class="sinopsis">${data.overview}</p>
