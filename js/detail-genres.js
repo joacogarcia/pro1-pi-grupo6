@@ -22,8 +22,8 @@ fetch(urlDetailGePeliculas)
 
     for(let i=0; i<4; i++){
         listaPeliculas += `
-        <article class="cajas">
-                <a href="./detail-movie.html?p=${generosPeliculas[i].id}"><img  class= "pelis" src="https://image.tmdb.org/t/p/w500/${generosPeliculas[i].poster_path}" alt=""></a>
+        <article class="sa">
+                <a href="./detail-movie.html?p=${generosPeliculas[i].id}"><img  class= "ims" src="https://image.tmdb.org/t/p/w500/${generosPeliculas[i].poster_path}" alt=""></a>
                 <p class="titulo">${generosPeliculas[i].title}</p>
             </article>
         <p class= "generoElegido" ${generosPeliculas[i].poster_path} alt = <a href="./detail-genres.html?p=${generosPeliculas[i].id}" class= "linkDetalle"> </article>`
@@ -60,8 +60,8 @@ fetch(urlDetailGeSeries)
 
     for(let i=0; i<4; i++){
         generoSeries += `
-        <article class="cajas">
-                <a href="./detail-serie.html?s=${generoDetalle[i].id}"><img  class= "pelis" src="https://image.tmdb.org/t/p/w500/${generoDetalle[i].poster_path}" alt=""></a>
+        <article class="sa">
+                <a href="./detail-serie.html?s=${generoDetalle[i].id}"><img  class= "ims" src="https://image.tmdb.org/t/p/w500/${generoDetalle[i].poster_path}" alt=""></a>
                 <p class="titulo">${generoDetalle[i].name}</p>
             </article>
         <p class= "resultadoGen" ${generoDetalle[i].poster_path} alt = <a href="./detail-genres.html?id=${generoDetalle[i].id}" class= "detailLink"> </article>`
