@@ -6,11 +6,11 @@ form.addEventListener('submit',(e)=>{
         
         if (buscador.value == "") {
 
-            alert('No puede enviar un form vacío')
+            alert('Submit something to search please')
             
         } else if (buscador.value.length < 3 ) {
 
-            alert('Debes escribir más de tres caracteres')
+            alert('You must write more than three characters')
         } else {
 
         form.submit() 
