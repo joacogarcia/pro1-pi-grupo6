@@ -21,7 +21,7 @@ fetch(urlDetalle)
     let generos = data.genres;
     let generospeli = "";
     for (let i = 0; i < generos.length ; i++) {
-        generospeli += `|<a class="listagd" href="./genre_details.html">${generos[i].name} </a>` 
+        generospeli += `|<a class="listagd" href="./detail-genres.html">${generos[i].name} </a>` 
     }
     generospeli += "|";
     let textodetail = `<h1 class="tdetail">${data.title}</h1> 
